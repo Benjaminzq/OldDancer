@@ -23,7 +23,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private TextView txt_mine;
     private FrameLayout ly_content;
     Fragment object;
-    MyFragment fg1,fg3;
+    exercise fg1;
+    MyFragment fg3;
     knowledge fg2;
     private android.app.FragmentManager fManager;
 
@@ -78,7 +79,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 setSelected();
                 txt_home.setSelected(true);
                 if (fg1==null){
-                    fg1=new MyFragment("功能主页");
+                    fg1=new exercise();
                     fragmentTransaction.add(R.id.ly_content,fg1);
                 }else {
                     fragmentTransaction.show(fg1);
